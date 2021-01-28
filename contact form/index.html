@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="contact form using html and css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Responsive contact form | Marija Milosevic</title>
+  </head>
+  <body>
+    <!--Container-->
+    <section>
+
+      <!--Left part with image (not visible on phone)-->
+      <article>
+        <img src="/img/letter.png" alt="Letter" />
+      </article>
+      <!--End of Left part with image-->
+
+      <article>
+        <p>Get in touch</p>
+        <form>
+          <!--Input for name-->
+          <div class="input-wrap">
+            <input class="input-default" type="text" name="name" placeholder="Name" />
+            <span class="input-focus"></span>
+            <span class="input-symbol">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </span>
+          </div>
+          <!--End of Input for name-->
+
+          <!--Input for email-->
+          <div class="input-wrap">
+            <input class="input-default" type="text" name="email" placeholder="Email" />
+            <span class="input-focus"></span>
+            <span class="input-symbol">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+          <!--End of Input for email-->
+
+          <!--Textarea for message-->
+          <div class="input-wrap">
+            <textarea
+              class="input-default"
+              name="message"
+              placeholder="Message"
+            ></textarea>
+            <span class="input-focus"></span>
+          </div>
+
+          <!--End of Textarea for message-->
+
+        </form>
+
+        <!--Button for submit-->
+        <button>Send</button>
+        <!--End of Button for submit-->
+
+      </article>
+      
+    </section>
+    <!--End of Container-->
+  </body>
+</html>

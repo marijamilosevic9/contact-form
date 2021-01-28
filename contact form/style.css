@@ -1,0 +1,336 @@
+/***** TABLE OF CONTENTS *****/
+
+/*****************************/
+/*
+1. CSS RESET
+2. HTML AND BODY
+3. SECTION, ARTICLE, PARAGRAPH
+4. FONT SETTINGS
+5. INPUT SETTINGS
+6. TEXTAREA SETTINGS
+7. SYMBOL AND IFRAME
+8. BUTTON SETTINGS
+9. RESPONSIVE DESIGN
+*/
+
+/* 1. CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. HTML AND BODY */
+html, body {
+  height: 100%;
+  font-family: Montserrat-Regular, sans-serif;
+}
+
+body {
+  background-image: url(/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 3. SECTION, ARTICLE, PARAGRAPH */
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 92vh;
+  width: 92%;
+  border-radius: 9px;
+  background-color: #ffffff;
+}
+
+article {
+  padding: 3rem 1rem 0.5rem;
+}
+
+article img {
+  display: none;
+}
+
+p {
+  display: block;
+  padding-bottom: 2.5rem;
+  font-family: Montserrat-ExtraBold;
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* 4. FONT SETTINGS */
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(../fonts/montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-ExtraBold;
+  src: url(../fonts/montserrat/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url(../fonts/montserrat/Montserrat-Medium.ttf);
+}
+
+/* 5. INPUT SETTINGS */
+input {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder {/* Chrome/Opera/Safari */
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {/* Firefox 18- */
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {/* Firefox 19+ */
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {/* IE 10+ */
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {/* Chrome/Opera/Safari */
+  color: #aaa;
+}
+
+input:-moz-placeholder {/* Firefox 18- */
+  color: #aaa;
+}
+
+input::-moz-placeholder {/* Firefox 19+ */
+  color: #aaa;
+}
+
+input:-ms-input-placeholder {/* IE 10+ */
+  color: #aaa;
+}
+
+input.input-default {
+  height: 50px;
+  padding: 0 30px 0 50px;
+  border-radius: 25px;
+}
+
+input.input-default[name="email"] {
+  padding: 0 30px 0 54px;
+}
+
+.input-wrap {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.input-default {
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  font-family: Montserrat-Bold;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.input-focus {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 0 0;
+  color: rgba(132, 106, 221, 0.5);
+}
+
+.input-default:focus + .input-focus + .input-symbol {
+  padding-left: 22px;
+  color: #3e1ea5;
+}
+
+/* 6. TEXTAREA SETTINGS */
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus::-webkit-input-placeholder {/* Chrome/Opera/Safari */
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {/* Firefox 18- */
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {/* Firefox 19+ */
+  color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {/* IE 10+ */
+  color: transparent;
+}
+
+textarea::-webkit-input-placeholder {/* Chrome/Opera/Safari */
+  color: #aaa;
+}
+
+textarea:-moz-placeholder {/* Firefox 18- */
+  color: #aaa;
+}
+
+textarea::-moz-placeholder {/* Firefox 19+ */
+  color: #aaa;
+}
+
+textarea:-ms-input-placeholder {/* IE 10+ */
+  color: #aaa;
+}
+
+textarea.input-default {
+  min-height: 150px;
+  padding: 14px 30px;
+  border-radius: 25px;
+}
+
+/* 7. SYMBOL AND IFRAME */
+
+.input-symbol {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  border-radius: 25px;
+  pointer-events: none;
+  color: #aaa;
+  font-size: 15px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+iframe {
+  border: none !important;
+}
+
+/* 8. BUTTON */
+button {
+  outline: none !important;
+  border: none;
+  background: 0 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 25px;
+  justify-content: center;
+  align-items: center;
+  background: #3e1ea5;
+  font-family: Montserrat-Bold;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+button:hover {
+  background-color: #6044b9;
+}
+
+/* 9. RESPONSIVE DESIGN */
+
+@media (min-width: 576px) {
+  article {
+    padding: 4rem 2.2rem 0.5rem;
+  }
+}
+
+@media (min-width: 700px) {
+  section {
+    display: flex;
+  }
+  article {
+    padding: 7rem 2rem 0rem 2rem;
+    width: 50%;
+  }
+  article img {
+    display: inline;
+    width: 230px;
+    padding-top: 2.5rem;
+    padding-left: 2rem;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+@media (min-width: 900px) {
+  article {
+    padding: 6rem 3rem 0rem 3rem;
+  }
+  article img {
+    width: 270px;
+    padding-top: 3rem;
+    padding-left: 4rem;
+  }
+  section {
+    height: 95vh;
+    width: 75%;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  article img {
+    width: 300px;
+    padding-top: 5rem;
+    padding-left: 7rem;
+  }
+  section {
+    height: 90vh;
+    width: 70%;
+  }
+}
